@@ -1,0 +1,79 @@
+.clip-result {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-l);
+}
+
+.clip-result h2 {
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
+}
+
+.clip-result video {
+  animation: develop 2.4s ease-out both;
+  background: var(--color-bg);
+  border: 0.75rem solid var(--color-paper);
+  box-shadow:
+    0 0 60px rgb(226 59 46 / 0.25),
+    0 0 0 1px var(--color-rule);
+  margin: 0 auto;
+  max-height: 55vh;
+  width: 100%;
+}
+
+@keyframes develop {
+  0% {
+    filter: sepia(1) saturate(5) hue-rotate(-30deg) brightness(0.55) contrast(1.15);
+    opacity: 0.35;
+  }
+
+  60% {
+    filter: sepia(0.4) saturate(1.6) hue-rotate(-10deg) brightness(0.85);
+    opacity: 1;
+  }
+
+  100% {
+    filter: none;
+  }
+}
+
+.clip-result__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-s);
+}
+
+.clip-result__download {
+  background: var(--color-reveal-dark);
+  border-radius: var(--radius);
+  color: var(--color-paper);
+  flex: 1 1 12rem;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  padding: var(--space-m);
+  text-align: center;
+  text-decoration: none;
+  transition: filter var(--transition);
+}
+
+.clip-result__download:hover {
+  filter: brightness(1.15);
+}
+
+.clip-result__actions button {
+  background: transparent;
+  border: 1px solid var(--color-paper-muted);
+  border-radius: var(--radius);
+  color: var(--color-paper);
+  flex: 1 1 12rem;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 600;
+  padding: var(--space-m);
+  transition: background var(--transition), color var(--transition);
+}
+
+.clip-result__actions button:hover {
+  background: var(--color-paper);
+  color: var(--color-bg);
+}

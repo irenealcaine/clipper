@@ -1,0 +1,22 @@
+:root {
+  --color-bg: #14100f;
+  --color-surface: #26120f;
+  --color-safelight: #3b0f0d;
+  --color-reveal: #e23b2e;
+  --color-reveal-dark: #b72b22;
+  --color-reveal-light: #ff8a7a;
+  --color-amber: #ff9a3d;
+  --color-paper: #f2efe9;
+  --color-paper-muted: #b3a49b;
+  --color-rule: #4a2622;
+  --font-display: "Syne", system-ui, sans-serif;
+  --font-sans: "Archivo", system-ui, sans-serif;
+  --radius: 2px;
+  --space-xs: 0.25rem;
+  --space-s: 0.5rem;
+  --space-m: 1rem;
+  --space-l: 1.5rem;
+  --space-xl: 2.5rem;
+  --content-width: 46rem;
+  --transition: 0.15s ease;
+}

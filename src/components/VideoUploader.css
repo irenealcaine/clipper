@@ -1,0 +1,37 @@
+.video-uploader {
+  border: 1px dashed var(--color-reveal-dark);
+  box-shadow: 0 0 50px rgb(226 59 46 / 0.12);
+  padding: var(--space-xl) var(--space-l);
+  transition: border-color var(--transition), background var(--transition);
+}
+
+.video-uploader--dragging {
+  background: rgb(226 59 46 / 0.1);
+  border-color: var(--color-amber);
+}
+
+.video-uploader h2 {
+  font-size: clamp(1.75rem, 5vw, 2.25rem);
+}
+
+.video-uploader p {
+  color: var(--color-paper-muted);
+  margin: var(--space-s) 0 var(--space-l);
+  max-width: 34rem;
+}
+
+.video-uploader__button {
+  background: var(--color-reveal-dark);
+  border: none;
+  border-radius: var(--radius);
+  color: var(--color-paper);
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  padding: var(--space-s) var(--space-l);
+  transition: filter var(--transition);
+}
+
+.video-uploader__button:hover {
+  filter: brightness(1.15);
+}

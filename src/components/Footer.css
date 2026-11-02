@@ -1,0 +1,20 @@
+.footer {
+  align-items: center;
+  border-top: 1px solid var(--color-rule);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-l);
+  justify-content: center;
+  padding: var(--space-l) var(--space-m);
+}
+
+.footer a {
+  color: var(--color-paper-muted);
+  display: inline-flex;
+  font-size: 1.35rem;
+  transition: color var(--transition);
+}
+
+.footer a:hover {
+  color: var(--color-amber);
+}

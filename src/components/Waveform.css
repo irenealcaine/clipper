@@ -1,0 +1,6 @@
+.waveform {
+  color: var(--color-amber);
+  display: block;
+  height: 100%;
+  width: 100%;
+}

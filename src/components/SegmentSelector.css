@@ -1,0 +1,79 @@
+.segment-selector {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-s);
+}
+
+.segment-selector__labels {
+  color: var(--color-amber);
+  display: flex;
+  font-size: 0.95rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  justify-content: space-between;
+}
+
+.segment-selector__track {
+  background:
+    repeating-linear-gradient(
+      to right,
+      rgb(242 239 233 / 0.1) 0 1px,
+      transparent 1px 40px
+    ),
+    var(--color-surface);
+  height: 3.25rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.segment-selector__track--wave {
+  background: var(--color-surface);
+}
+
+.segment-selector__track--wave::before,
+.segment-selector__track--wave::after {
+  display: none;
+}
+
+.segment-selector__wave {
+  height: 100%;
+  width: 100%;
+}
+
+.segment-selector__track::before,
+.segment-selector__track::after {
+  background-image: repeating-linear-gradient(
+    to right,
+    rgb(242 239 233 / 0.18) 0 7px,
+    transparent 7px 17px
+  );
+  content: "";
+  height: 5px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  z-index: 2;
+}
+
+.segment-selector__track::before {
+  top: 3px;
+}
+
+.segment-selector__track::after {
+  bottom: 3px;
+}
+
+.segment-selector__window {
+  background: rgb(226 59 46 / 0.3);
+  border-left: 2px solid var(--color-amber);
+  border-right: 2px solid var(--color-amber);
+  cursor: grab;
+  height: 100%;
+  position: absolute;
+  touch-action: none;
+  z-index: 3;
+}
+
+.segment-selector__window:active {
+  cursor: grabbing;
+}
